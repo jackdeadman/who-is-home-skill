@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  residents-service:
+    build: services/residents
+    volumes:
+      - ./services/residents:/usr/src/app
+    ports:
+      - 5001:80
