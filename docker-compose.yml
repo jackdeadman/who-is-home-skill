@@ -6,4 +6,14 @@ services:
     volumes:
       - ./services/residents:/usr/src/app
     ports:
-      - 5001:80
+      - 5000:80
+
+  website:
+    build: website
+    volumes:
+      - ./website:/usr/src/app
+    ports:
+      - 5001:3000
+    
+    depends_on:
+      - residents-service
