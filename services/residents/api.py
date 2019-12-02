@@ -11,8 +11,8 @@ Resident = namedtuple('Resident', [
 
 residents_list = [
     Resident("Jack", "192.168.1.79"),
-    Resident("Simon", "192.168.1.78"),
-    Resident("Greg", "192.168.1.279"),
+    Resident("Simon", "192.168.1.59"),
+    Resident("Greg", "192.168.1.69"),
 ]
 
 
@@ -20,6 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    # TODO: Do check async
     return jsonify(
         residents=[
             {
